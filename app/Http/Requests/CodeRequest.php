@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CodeRequest extends FormRequest
 {
@@ -26,7 +27,7 @@ class CodeRequest extends FormRequest
         return [
             'category_id' => 'required|numeric|exists:categories,id',
             'diagnosis_code' => 'required|string|max:20',
-            'full_code' => 'required|string|unique:codes|max:20',
+            'full_code' => 'required|string|max:20', Rule::unique('codes')->ignore($this->id),
             'abbreviated_description' => 'string',
             'full_description' => 'string',
         ];
