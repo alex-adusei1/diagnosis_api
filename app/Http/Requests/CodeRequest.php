@@ -25,7 +25,7 @@ class CodeRequest extends FormRequest
     {
         return [
             'category_id' => 'required|numeric|exists:categories,id',
-            'diagnosis_code' => 'required|string|unique:codes|max:20',
+            'diagnosis_code' => 'required|string|max:20',
             'full_code' => 'required|string|unique:codes|max:20',
             'abbreviated_description' => 'string',
             'full_description' => 'string',
