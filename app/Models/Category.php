@@ -15,4 +15,9 @@ class Category extends ApiModel
     {
         $this->attributes['title'] = ucfirst($value);
     }
+
+    public function code()
+    {
+        return $this->hasMany(Code::class);
+    }
 }
