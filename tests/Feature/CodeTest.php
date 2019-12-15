@@ -56,7 +56,7 @@ class CodeTest extends TestCase
 
     public function test_get_paginated_code()
     {
-        $limit = 10;
+        $limit = 20;
         $params = ['limit' => $limit, 'sort' => 'asc', 'contain' => 'category'];
 
         $this->insertRecords();
@@ -65,13 +65,23 @@ class CodeTest extends TestCase
         $this->assertCount($limit, $response->getData(true)['data']);
     }
 
+    public function test_get_by_id_code()
+    {
+        $count_items = 1;
+        $response = $this->json('GET', '/api/codes/' . $this->code->id, ['contain' => 'category']);
+        $response->assertStatus(200)
+            ->assertJson([
+                'data' => ['id' => $this->code->id],
+            ]);
+    }
+
     public function test_delete_code()
     {
         $this->json('DELETE', '/api/codes/' . $this->code->id)
             ->assertStatus(200);
     }
 
-    private function insertRecords($numberOfInserts = 20)
+    private function insertRecords($numberOfInserts = 45)
     {
         for ($i = 0; $i < $numberOfInserts; $i++) {
             Code::Create([
