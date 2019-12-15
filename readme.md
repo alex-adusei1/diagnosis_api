@@ -10,12 +10,12 @@ a RESTful API that can allow us to utilize an internationally recognized set of 
 
 ## Terminal Activities
 
--   [Open terminal and move to the root directory of the codebase]
--   [Run docker-compose up -- this will builds, (re)creates, starts, and attaches to containers for a service.]
--   [Run composer install -- this will install all dependencies example phpunit]
--   [Run php artisan key:generate -- this will generate a key for user session and secure encrypted data]
--   [Run php artisan migrate:fresh --seed -- this will create database tables and persit initial data to their various tables]
--   [Run vendor/bin/phpunit -- this will test the features]
+-   Open terminal and move to the root directory of the codebase
+-   Run docker-compose up -- this will build, (re)create, start, and attach to containers for a service
+-   Run composer install -- this will install all dependencies example phpunit
+-   Run php artisan key:generate -- this will generate a key for user session and secure encrypted data
+-   Run php artisan migrate:fresh --seed -- this will create database tables and persit initial data to their various tables
+-   Run vendor/bin/phpunit -- this will test the features
 
 ## Design pattern
 
