@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "fa8f00a2-6bbc-4420-b15a-58b8121d0131",
+		"name": "diagnosis_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/categories?code=A00&title=Cholera",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "A00"
+								},
+								{
+									"key": "title",
+									"value": "Cholera"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/categories",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/categories",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/categories",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/categories/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "codes",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/codes?category_id=2&diagnosis_code=3&full_code=a0103&abbreviated_description=Typhoid pneumonia&full_description=Typhoid pneumonia",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"codes"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "2"
+								},
+								{
+									"key": "diagnosis_code",
+									"value": "3"
+								},
+								{
+									"key": "full_code",
+									"value": "a0103"
+								},
+								{
+									"key": "abbreviated_description",
+									"value": "Typhoid pneumonia"
+								},
+								{
+									"key": "full_description",
+									"value": "Typhoid pneumonia"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/codes/7?full_description=will be added shortly&category_id=2&diagnosis_code=3&full_code=A0103",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"codes",
+								"7"
+							],
+							"query": [
+								{
+									"key": "full_description",
+									"value": "will be added shortly"
+								},
+								{
+									"key": "category_id",
+									"value": "2"
+								},
+								{
+									"key": "diagnosis_code",
+									"value": "3"
+								},
+								{
+									"key": "full_code",
+									"value": "A0103"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/codes/7",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"codes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/codes?contain=category&=",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"codes"
+							],
+							"query": [
+								{
+									"key": "contain",
+									"value": "category"
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100/api/codes/7?contain=category",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"path": [
+								"api",
+								"codes",
+								"7"
+							],
+							"query": [
+								{
+									"key": "contain",
+									"value": "category"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
